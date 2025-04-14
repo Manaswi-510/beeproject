@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive DC Motor Simulation</title>
+  <link rel="stylesheet" href="bee2.css" />
+</head>
+<body>
+  <header>
+    <h1>Interactive DC Motor Simulation</h1>
+  </header>
+
+  <main>
+    <section class="motor-section">
+      <div class="motor-container">
+        <div class="rotor" id="rotor"></div>
+      </div>
+      <div class="controls">
+        <p>Eb is constant i.e 20V.</p>
+        <label for="voltage">Voltage (V): </label>
+        <input type="range" id="voltage" min="0" max="100" value="50" step="1" />
+        <span id="voltageValue">50V</span>
+        <p>Adjust the voltage to control motor speed.</p>
+      </div>
+    </section>
+
+    <section class="equation-section">
+      <h2>Voltage Equation:</h2>
+      <p>V = E<sub>b</sub> + I<sub>a</sub>R<sub>a</sub></p>
+      <div>
+        <label for="current">Armature Current (I<sub>a</sub>):</label>
+        <input type="number" id="current" value="5" step="0.1"/>
+      </div>
+      <div>
+        <label for="resistance">Armature Resistance (R<sub>a</sub>):</label>
+        <input type="number" id="resistance" value="2" step="0.1"/>
+      </div>
+      <button onclick="calculateVoltage()">Calculate Voltage</button>
+      <p id="calculatedVoltage"></p>
+    </section>
+  </main>
+
+  <script src="bee2.js"></script>
+</body>
+</html>

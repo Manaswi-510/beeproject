@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef2f3;
+  color: #333;
+}
+
+header {
+  background: #023047;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 5px 0 0;
+}
+
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tab-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #219ebc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-buttons button:hover {
+  background: #126782;
+}
+
+.tab-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 0.4s ease-in-out;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.motor-animation {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 30px auto;
+}
+
+.stator {
+  width: 150px;
+  height: 150px;
+  border: 5px dashed #333;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.rotor {
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 55px;
+  left: 55px;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 8px 15px;
+  background: #ffb703;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card {
+  background: #e0fbfc;
+  border-left: 5px solid #219ebc;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+footer {
+  background: #023047;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}

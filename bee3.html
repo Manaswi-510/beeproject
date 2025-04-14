@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Induction Motor</title>
+  <link rel="stylesheet" href="bee3.css" />
+</head>
+<body>
+  <header>
+    <h1>Interactive Single Phase Induction Motor</h1>
+   
+  </header>
+
+  <main>
+    <div class="tab-buttons">
+      <button onclick="showTab('construction')">Construction</button>
+      <button onclick="showTab('working')">Working Principle</button>
+      <button onclick="showTab('applications')">Applications</button>
+      <button onclick="showTab('dc-animation')">DC Motor Demo</button>
+    </div>
+
+    <div id="construction" class="tab-content">
+      <h2>Construction</h2>
+      <p>The motor consists of:</p>
+      <ul>
+        <li><b>Stator</b>: Fixed part with winding connected to power supply.</li>
+        <li><b>Rotor</b>: Squirrel cage type, rotates due to induced EMF.</li>
+      </ul>
+      <img src="diagram.jpeg" alt="Construction Diagram" class="responsive-img"/>
+    </div>
+
+    <div id="working" class="tab-content" style="display: none;">
+      <h2>Working Principle</h2>
+      <p>
+        The motor works on electromagnetic induction. A pulsating magnetic field is produced which interacts with the rotor. Since it’s not self-starting, auxiliary windings (like capacitors or split phase) help start rotation.
+      </p>
+      <div class="motor-animation">
+        <div class="rotor" id="rotor"></div>
+        <div class="stator"></div>
+      </div>
+      <div class="controls">
+        <button onclick="startMotor()">Start Motor</button>
+        <button onclick="stopMotor()">Stop Motor</button>
+      </div>
+    </div>
+
+    <div id="applications" class="tab-content" style="display: none;">
+      <h2>Applications</h2>
+      <div class="card">
+        <h3>Split Phase Motor</h3>
+        <p>Used in fans, washing machines, small tools.</p>
+      </div>
+      <div class="card">
+        <h3>Capacitor Start Motor</h3>
+        <p>Used in compressors and water pumps.</p>
+      </div>
+      <div class="card">
+        <h3>Capacitor Run Motor</h3>
+        <p>Used in air conditioners and refrigerators.</p>
+      </div>
+    </div>
+
+    <div id="dc-animation" class="tab-content" style="display: none;">
+      <h2>DC Motor Simulation</h2>
+      <p>See how a DC motor rotates due to Lorentz force.</p>
+      <canvas id="dcMotorCanvas" width="300" height="300"></canvas>
+    </div>
+  </main>
+
+  
+
+  <script src="bee3.js"></script>
+</body>
+</html>

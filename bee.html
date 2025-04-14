@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three Phase Induction Motor Simulation</title>
+  <link rel="stylesheet" href="bee.css" />
+</head>
+<body>
+  <header>
+    <h1>Three Phase Induction Motor Simulation</h1>
+    <p>Interact with the motor's parameters and see the rotor in action!</p>
+  </header>
+
+  <div id="content">
+    <section id="motorCanvasSection">
+      <h2>Motor Simulation</h2>
+      <canvas id="rmfCanvas" width="400" height="400"></canvas>
+    </section>
+
+    <section id="controls">
+      <h2>Motor Controls</h2>
+      <label for="voltage">Voltage (V):</label>
+      <input type="range" id="voltage" min="0" max="440" value="220" />
+      <span id="voltageValue">220V</span>
+
+      <label for="frequency">Frequency (Hz):</label>
+      <input type="range" id="frequency" min="0" max="100" value="50" />
+      <span id="frequencyValue">50Hz</span>
+
+      <label for="poles">Number of Poles:</label>
+      <input type="range" id="poles" min="2" max="8" value="4" />
+      <span id="polesValue">4 Poles</span>
+
+      <label for="slip">Slip (%):</label>
+      <input type="range" id="slip" min="0" max="10" value="3" />
+      <span id="slipValue">3%</span>
+
+      <button onclick="startMotor()">Start Motor</button>
+      <button onclick="stopMotor()">Stop Motor</button>
+      <button onclick="resetMotor()">Reset</button>
+    </section>
+  </div>
+
+  <footer>
+    <p>Manaswi Sontakke |
+       Ragini Taware |
+       Sharanya Yeltiwar |
+       Rinkal Lathi |
+       Manjula Zondes |
+    </p>
+  </footer>
+  <section id="motorDiagramSection">
+    <h2>Parts of a Three-Phase Induction Motor</h2>
+    <div id="motorPartsContainer">
+      <!-- SVG Diagram of the motor -->
+      <svg id="motorDiagram" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- Stator -->
+        <circle id="stator" cx="150" cy="150" r="120" stroke="black" stroke-width="4" fill="none" />
+        <!-- Rotor -->
+        <circle id="rotor" cx="150" cy="150" r="80" stroke="blue" stroke-width="4" fill="rgba(0, 0, 255, 0.2)" />
+        <!-- Shaft -->
+        <rect id="shaft" x="145" y="180" width="10" height="50" fill="#555" />
+        <!-- Bearings -->
+        <circle id="bearingLeft" cx="110" cy="150" r="15" fill="#ff9800" />
+        <circle id="bearingRight" cx="190" cy="150" r="15" fill="#ff9800" />
+      </svg>
+  
+      <!-- Popup to show part info -->
+      <div id="partInfoPopup">
+        <div id="partInfoContent">
+          <span id="closePopup" onclick="closePopup()">×</span>
+          <h3 id="partTitle"></h3>
+          <p id="partDescription"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a href="bee2.html">Click to see dc motor</a>
+  <br>
+  <a href="bee3.html">Click to see interactive single phase DC motor</a>
+ 
+  
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>

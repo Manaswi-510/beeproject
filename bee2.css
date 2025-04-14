@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
+    color: #333;
+  }
+  
+  header {
+    background-color: #004d99;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .motor-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .motor-container {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #004d99;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1rem;
+    background: #e0f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rotor {
+    width: 60px;
+    height: 10px;
+    background-color: #cc0000;
+    position: absolute;
+    transform-origin: center;
+  }
+  
+  .controls {
+    text-align: center;
+  }
+  
+  input[type="range"] {
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .equation-section {
+    max-width: 400px;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .equation-section input {
+    width: 80px;
+    margin-left: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    background: #004d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

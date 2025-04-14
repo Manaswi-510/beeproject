@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #f0f0f0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #222;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 2px solid #00bcd4;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #00bcd4;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  #content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  #motorCanvasSection {
+    width: 50%;
+    text-align: center;
+  }
+  
+  #controls {
+    width: 40%;
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #00bcd4;
+  }
+  
+  #controls h2 {
+    color: #00bcd4;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin: 1rem 0;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+  }
+  
+  button {
+    background: #00bcd4;
+    color: #111;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #aaa;
+    border-top: 2px solid #00bcd4;
+  }
+  #motorDiagramSection {
+    text-align: center;
+  }
+  
+  #motorPartsContainer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #motorDiagram {
+    width: 300px;
+    height: 300px;
+  }
+  
+  #shaft {
+    fill: #555;
+  }
+  
+  #bearingLeft, #bearingRight {
+    cursor: pointer;
+  }
+  
+  #partInfoPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    z-index: 10;
+  }
+  
+  #partInfoContent {
+    text-align: left;
+  }
+  
+  #closePopup {
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+ a{
+  color: #ffffff;
+ }
